@@ -1,0 +1,7 @@
+A German mathematician named Leibniz came up with a series that could be used to approximate the value of Pi. His series provides a way to determine the value of π/4.
+
+To approminate the value of Pi, create a program that does the following:
+1. Ask the user for the numbers of terms in the series
+2. Use an accumulator to add up the terms
+3. Use -1 to change the signs
+4. Multiply the final sum by 4 to get the value of π.

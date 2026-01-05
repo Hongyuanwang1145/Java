@@ -1,0 +1,12 @@
+/*  
+  Bonus Challenge:
+  We want to create a "Rock - Paper - Scissors" game. The user plays against the computer. You'll ask the user to choose 1 for rock, 2 for paper and 3 for scissors. There will be three possible outcomes: draw, win, lose.
+
+  The rules are as follows:
+  If the player and the computer choose the same, it's a draw. You get to play again.
+  Rock(1) beats scissors(3)
+  Paper(2) beats rock(1)
+  Scissors(3) beats paper(2)
+
+Name the function rockPaperScissors().
+*/
