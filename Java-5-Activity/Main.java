@@ -1,7 +1,7 @@
 class Main {
-	public static void main(String[] args) {
-    	(new Main()).init();
-	}
+    public static void main(String[] args) {
+        (new Main()).init();
+    }
 
   void init(){  
 /*  
@@ -20,14 +20,12 @@ class Main {
     Create three variables to assign three grades and assign values to each grade. 
     Calculate the sum of the three grades, store the 
     calculated sum and then display it.
-    
-*/
-sum = 0;
-double grade1 = 60;
-double grade2 = 75;
-double grade3 = 90;
-sum = grade1 + grade2 + grade3;
-System.out.println(Sum of the )
+    */
+  int grade1 = 83;
+  int grade2 = 100;
+  int grade3 = 96;
+  int total = grade1 + grade2 + grade3;
+  System.out.println("Sum of grades is "+ total);
 
 // ****NOTE**** Since the variable 'sum' was declared earlier as an integer, you 
 // don't need to declare it again. If you do so, you will get a syntax error.
@@ -41,9 +39,10 @@ System.out.println(Sum of the )
     Declare and assign values to any new variables
 
     NOTE: Does it look correct, check with a calculator?
+    it does.
 */
-double average = sum/3.0;
-System.out.println("Average of the 3 grades is: "+ average);
+    double average = (grade1 + grade2 + grade3)/3;
+    System.out.println("Average is "+ average);
 
 // **** NOTE **** since sum is an integer we don't want to divide by another integer
 // 3 because we get integer division and the decimal part will be truncated. 
@@ -56,25 +55,31 @@ System.out.println("Average of the 3 grades is: "+ average);
     Declare and assign values to any new variables.
 
 */
-double y = 1q;
-double x = 7; 
-double A = 14.5;
-y = A*1.0/(x+1);
-System.out.println("y=  "+ y);
+    double A = 5;
+    double x = 4;
+    double y = (A/(x+1));
+    System.out.println(y);
+
 /*  
     Challenge 5:
     Using the same variables from challenge 4 above, write the equation in file EQ2.PNG
     in Java, store the result and the display it:
 */
  // **** NOTE **** The variable y is already declared above so we don't need to re-declare it.
-
+    double x1 = 5;
+    double A1 = 4;
+    double y1 = ((2*x1)*(x1+1)*(-x1/2))/A1;
+    System.out.println(y1);
 
 /*  
     Challenge 6:
     Write the equation in file EQ3.PNG in Jave. Create appropriate variables as required.
     Declare and assign values to any new variables.
 */ 
-
+    double b = 5;
+    double h = 4;
+    double y2 = (0.5*b*h);
+    System.out.println(y2);
 
 /*  
     **** Bonus Challenge ****:
@@ -88,7 +93,9 @@ System.out.println("y=  "+ y);
     2) Write the Java code that will calculate how many eggs
     are left over after all baskets are filled with 12 eggs each.
 */
-
+    int eggs = 100;
+    System.out.println("Baskets: "+ eggs/12+ ", remainder is "+ eggs%12);
+    
 
     // Use integer division to give us the quotient when dividing by 12
 
@@ -100,5 +107,4 @@ System.out.println("y=  "+ y);
     // **************************************************
     // **** Don't write any code below here.  ***********
     // **************************************************
-  }
-}
+  
