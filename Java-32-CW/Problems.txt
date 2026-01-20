@@ -1,0 +1,12 @@
+Problem 1:
+Modify the Student class to store and add courses as an array of strings. 
+  - You will need to add a class variable and change the constructor for the Student class.
+
+Problem 2:
+Write a function checkCourse() in the Student class that accepts a course (as a string) and returns true if the student is taking that course; otherwise return false.
+
+Problem 3:
+Create two student objects in the Main file > init fn. Use the arrays courses1 and courses2 when creating the two student objects.
+
+Problem 4:
+Produce an output to indicate if each student's course-load includes a specific course.
