@@ -1,0 +1,16 @@
+Use the class CartItem for the challenges below.(see CartItem.PNG for UML diagram)
+
+Challenge 1:
+Write the constructor for the class CartItem.
+
+Challenge 2:
+Write a class function getPrice() that has no parameters. It returns the price discounted by 10% (i.e. 90% of the original price) if an item is on sale, otherwise it returns the original item price.
+
+Challenge 3:
+Create three cart items. (say, supermarket items), with 2 items on sale, and one not on sale.
+
+Challenge 4:
+Display the name and original price of the cart items that are on sale.
+
+Challenge 5:
+USING THE DISCOUNTED PRICES (not original, if applicable) display the subtotal of prices of all the cart items, the tax (use 8.875% as tax rate), and the total amount (i.e., subtotal plus tax).
