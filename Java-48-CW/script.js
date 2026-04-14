@@ -20,7 +20,10 @@ async function init(){
   let employees = data;
   
   // Problem 3: For each employee, display their first name, last name and birthdate to the console.
-
+for(let i=0; i<empolyees.length; i++){
+  let empolyee = empolyees [i];
+  console.log("First name: " + employee.Firstname);
+}
   
 
 }
