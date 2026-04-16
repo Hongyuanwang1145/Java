@@ -36,24 +36,31 @@ class Main {
     // For all problems below, limit query to about 5 records and only pull up required fields (columns)    
 
       // Problem 1: Create a default route that serves the message: "You are connected, but route not given or incorrect....";
+       server.createContext("/", new RouteHandler("You are connected, but route not given or incorrect....") );
 
-    
-      // Problem 2: Create a route called 'customers' that gets the First name, Last name and Phone# for the first 5 entries of the Customers table.
+    // Problem 2: Create a route called 'customers' that gets the ID, First name, Last name and Phone# for the first 5 entries of the Customers table.
+    String sql = "";
+    sql  = " Select customers.customerId, customers.firstname, customers.lastname, customers.phone from Customers ";
+    //sql += " LIMIT 15 ";
+    server.createContext("/customers", new RouteHandler(db,sql) ) ;
 
-    
-      // Problem 3: Create a route called 'employees' that gets Employee ID and Title of the first 5 entries in the Employees table.
+    // Problem 3: Create a route called 'employees' that gets Employee ID and Title of the first 5 entries in the Employees table.
+    // sql  = " Select employees.employeeID, employees.title from employees ";
+    sql  = " Select * from employees ";
+    sql += " LIMIT 15 ";
+    server.createContext("/employees", new RouteHandler(db,sql) ) ;
 
-    
-      // Problem 4: Create a route called 'albumsinfo' that gets the albums with the track information and artists information. (Limit to 5 records)
+    // Problem 4: Create a route called 'albumsinfo' that gets the albums with the track information and artists information. (Limit to 5 records)
+    sql  = " Select * From tracks ";
+    sql += " Inner Join albums ON albums.albumid=tracks.albumid ";
+    sql += " Inner Join artists ON albums.artistid=artists.artistid ";
+    sql += " LIMIT 15 ";
+    server.createContext("/albumsinfo", new RouteHandler(db,sql) );
 
-    
-      // Problem 5: Create a route called 'customersongs' that gets customer first & last names, song names and date of purchase (i.e., Invoice Date) of each song. (Limit to 5 records)
-
-    
-
-    // Start the server      
-    server.start();
-    System.out.println("Server is listening on port " + port);        
-      
-  }    
-}
+    // Problem 5: Create a route called 'customersongs' that gets customer first & last names, song names and date of purchase (i.e., Invoice Date) of each song. (Limit to 5 records)
+    sql  = " Select customers.firstname, customers.lastname, tracks.name, invoices.invoicedate From tracks ";
+    sql += " Inner Join invoice_items ON invoice_items.trackid=tracks.trackid ";
+    sql += " Inner Join invoices ON invoices.invoiceid=invoice_items.invoiceid ";
+    sql += " Inner Join customers ON invoices.customerid=customers.customerid ";
+    sql += " LIMIT 15 ";
+    server.createContext("/customersongs", new RouteHandler(db,sql) );
