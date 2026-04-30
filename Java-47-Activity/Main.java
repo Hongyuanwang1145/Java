@@ -64,3 +64,9 @@ class Main {
     sql += " Inner Join customers ON invoices.customerid=customers.customerid ";
     sql += " LIMIT 15 ";
     server.createContext("/customersongs", new RouteHandler(db,sql) );
+
+     server.start();
+    System.out.println("Server is listening on port " + port);        
+      
+  }    
+}
